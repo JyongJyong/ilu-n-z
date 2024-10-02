@@ -1,0 +1,463 @@
+@charset "UTF-8";
+@import url("font.css");
+/*공통스타일*/
+body {
+  font-family: "Arial", "NanumBarunGothic";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*상단 스타일*/
+header {
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 125px;
+  background-color: #fff;
+}
+header .inner {
+  height: 120px;
+}
+header #logo {
+  position: absolute;
+  top: 46px;
+  left: 40px;
+}
+header #logo a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-indent: -9999px;
+  background: url("../images/header_logo.png") no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
+header #header_gnb {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+header #header_gnb ul {
+  display: flex;
+  justify-content: space-between;
+}
+header #header_gnb a {
+  color: #a0a0a0;
+  font-size: 20px;
+  display: block;
+  top: 46px;
+  line-height: 20px;
+  height: 36px;
+  padding-bottom: 40px;
+}
+header #header_gnb .sub_title {
+  float: left;
+}
+header #header_gnb .gnb_nametag1 {
+  float: right;
+}
+header #header_gnb li:hover a {
+  color: #2a2a2a;
+}
+header #header_gnb li .sub {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background: #fafafa;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+header #header_gnb li:hover .sub {
+  height: 300px;
+}
+header #header_gnb li:hover .sub h2 {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+header #header_gnb .sub {
+  display: none;
+}
+header #header_gnb .sub li {
+  float: none;
+  margin: 0 0 0 15px;
+}
+header #header_gnb .sub a {
+  font-weight: normal;
+  padding: 0;
+  font-size: 15px;
+  white-space: nowrap;
+  color: #707070;
+}
+header #header_gnb .sub a::after {
+  display: none;
+}
+header #header_gnb .sub a:hover {
+  text-decoration: underline;
+  color: #FDCD04;
+}
+header #header_gnb:hover .sub {
+  display: block;
+}
+header #util {
+  position: absolute;
+  right: 140px;
+  top: 46px;
+}
+header #util ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+header #util ul li img {
+  width: 32px;
+  height: 32px;
+}
+header.scrolled {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+main {
+  position: relative;
+}
+main h3 {
+  font-size: 22px;
+  font-style: bold;
+  line-height: 28px;
+}
+main .board {
+  position: sticky;
+  top: 0;
+  left: 1280px;
+  width: 600px;
+  float: right;
+  overflow: hidden;
+}
+main .board ul {
+  display: flex;
+}
+main .board li {
+  position: relative;
+  flex-shrink: 0;
+}
+main .board li .text {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  color: #fafafa;
+  font-size: 20px;
+}
+main .board li h4 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+main .board li .text p:nth-child(2) {
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+main .board img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .option {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  color: #fafafa;
+  bottom: 40px;
+  font-size: 12px;
+}
+main .option .swiper-pagination {
+  margin: 0 20px;
+}
+main .option .swiper-scrollbar {
+  margin: 30px;
+}
+main .option .swiper-scrollbar {
+  width: 200px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.16);
+}
+main .option .swiper-scrollbar div {
+  height: 2px;
+  background: #fff;
+}
+main .option img {
+  width: 20px;
+  height: 20px;
+}
+main .apparel .sub_apparel {
+  display: flex;
+  margin-top: 290px;
+}
+main .apparel .sub_apparel .grid {
+  margin-left: 260px;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+main .apparel ul li p {
+  text-align: center;
+  margin-top: 15px;
+}
+main .apparel .main_apparel img {
+  width: 404px;
+  height: 480px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 15px;
+}
+main .main_apparel {
+  margin: -56px 0 0 105px;
+}
+main .main_apparel p {
+  padding-top: 20px;
+  color: #a0a0a0;
+}
+main .apparel .sub_apparel ul li img {
+  width: 192px;
+  height: 156px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 15px;
+}
+main .main_nametag img {
+  float: left;
+  width: 404px;
+  height: 589px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 15px;
+}
+main .main_nametag {
+  margin: 150px 100px 0 260px;
+}
+main .main_nametag p {
+  padding-top: 20px;
+  color: #a0a0a0;
+}
+main .sub_nametag {
+  margin: 0 0 0 100px;
+  width: 404px;
+  height: 589px;
+  float: left;
+}
+main .sub_nametag ul li {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-bottom: 0px;
+}
+main .sub_nametag ul li p {
+  padding-top: 30px;
+}
+main .sub_nametag img {
+  float: left;
+  width: 204px;
+  height: 166px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 46px;
+}
+main .sticker #left {
+  float: left;
+}
+main .sticker #left .main_sticker {
+  margin: 150px 0 0 260px;
+}
+main .sticker #left .main_sticker img {
+  width: 404px;
+  height: 589px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 15px;
+}
+main .sticker #left .main_sticker p {
+  padding-top: 20px;
+  color: #a0a0a0;
+}
+main .sticker #left .sub_sticker {
+  margin: 50px 100px 0 260px;
+  width: 404px;
+  height: 589px;
+}
+main .sticker #left .sub_sticker li {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-bottom: 0px;
+}
+main .sticker #left .sub_sticker p {
+  padding-top: 30px;
+}
+main .sticker #left .sub_sticker img {
+  float: left;
+  width: 204px;
+  height: 166px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 46px;
+}
+main .sticker #right {
+  float: left;
+  width: 404px;
+}
+main .sticker #right .main_calender {
+  margin: 300px 200px 0 0;
+  width: 400px;
+}
+main .sticker #right .main_calender img {
+  width: 404px;
+  height: 589px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 15px;
+}
+main .sticker #right .main_calender p {
+  padding-top: 20px;
+  color: #a0a0a0;
+  line-height: -500px;
+}
+main .sticker #right .sub_calender {
+  float: left;
+  width: 504px;
+}
+main .sticker #right .sub_calender ul {
+  display: flex;
+  justify-content: space-between;
+  width: 406px;
+  margin-top: 50px;
+}
+main .sticker #right .sub_calender li {
+  float: left;
+  width: 124px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+main .sticker #right .sub_calender img {
+  text-align: center;
+  width: 124px;
+  height: 180px;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 24px;
+}
+
+footer #footer_left {
+  width: 113px;
+  height: 412px;
+  background-color: #241D01;
+  float: left;
+}
+footer #footer_right {
+  float: right;
+  width: calc(100% - 113px);
+  height: 412px;
+  background-color: #FDCD04;
+}
+footer .footer_inner {
+  width: 1623px;
+  margin-top: 76px;
+  margin: 76px auto 0;
+  position: relative;
+}
+footer #footer_logo .footer_logo {
+  float: left;
+}
+footer #footer_logo .footer_slogan {
+  float: left;
+  font-size: 37px;
+  margin: 9.5px 0 0 29px;
+}
+footer #footer_logo::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #707070;
+  padding-top: 30px;
+  opacity: 0.3;
+}
+footer #footer_num {
+  margin-top: 24px;
+}
+footer #footer_num .footer_num {
+  font-size: 18px;
+}
+footer #footer_num .footer_num span {
+  margin-left: 133px;
+}
+footer #footer_num::after {
+  content: "";
+  display: block;
+  width: 1623px;
+  border-bottom: 1px solid #707070;
+  padding-top: 27px;
+  opacity: 0.3;
+}
+footer #footer_sns {
+  position: absolute;
+  right: 0;
+  top: 95px;
+}
+footer #footer_sns p {
+  margin-right: 12px;
+  display: inline-block;
+}
+footer address {
+  font-size: 18px;
+  margin-top: 36px;
+}
+footer address span {
+  margin-left: 10px;
+}
+footer address p:nth-child(2), footer address p:nth-child(3), footer address p:nth-child(4) {
+  float: left;
+  margin: 12px 42px 0 0;
+}
+footer address p:nth-child(5) {
+  clear: both;
+  padding-top: 20px;
+}
